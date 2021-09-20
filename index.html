@@ -10,18 +10,40 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
     <div class="container-center">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__menu menu">
+                    <div class="menu__icon">
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li><a class="menu__link" href="#skills">Skills</a></li>
+                            <li><a class="menu__link" href="#project">Project</a></li>
+                            <li><a class="menu__link" href="#languages">Languages</a></li>
+                            <li><a class="menu__link" href="#education">Education</a></li>
+                            <li><a class="menu__link" href="#code-example">Code Example</a></li>
+                            <li><a class="menu__link" href="#contacts">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
         <div class="two-columns">
             <div class="left-column">
-                <header>
+                <section class="user">
                     <img src="./images/Portrait.jpg" alt="Portrait" width="204" height="204">
                     <h1>Loveyko Sergey</h1>
                     <h2>Junior Frontend Developer</h2>
-                </header>
-                <main>
-                    <section class="contacts">
+                </section>
+                <main class="main">
+                    <section id="contacts" class="contacts">
                         <h3>CONTACTS</h3>
                         <ul>
                             <li>
@@ -42,7 +64,7 @@
                             </li>
                         </ul>
                     </section>
-                    <section class="skills">
+                    <section id="skills" class="skills">
                         <h3>SKILLS</h3>
                         <ul>
                             <li>HTML5, CSS3</li>
@@ -53,7 +75,7 @@
                             <li>Figma, Avocode</li>
                         </ul>
                     </section>
-                    <section class="languages">
+                    <section id="languages" class="languages">
                         <h3>LANGUAGES</h3>
                         <ul>
                             <li>
@@ -70,10 +92,10 @@
                             </li>
                         </ul>
                     </section>
-                </main>
+                </main >
             </div>
             <aside class="right-column">
-                <section class="about-myself">
+                <section class="about-myself section">
                     <div class="sub-header">
                         <h3>ABOUT MYSELF</h3>
                     </div>
@@ -90,7 +112,7 @@
                         will lead me through this path of becoming a proficient Frontend Developer.
                     </p>
                 </section>
-                <section class="education">
+                <section id="education" class="education section">
                     <div class="sub-header">
                         <h3>EDUCATION</h3>
                     </div>
@@ -102,7 +124,7 @@
                     <p>Years: 2001 - 2007</p>
                     <p>Faculty of Business Economics</p>
                 </section>
-                <section class="courses">
+                <section class="courses section">
                     <div class="sub-header">
                         <h3>COURSES</h3>
                     </div>
@@ -111,6 +133,38 @@
                         <li>Bootstrap on Fructcode.com</li>
                         <li>JavaScript + React on Udemy</li>
                     </ul>
+                </section>
+                <section id="code-example" class="code-example section">
+                    <div class="sub-header">
+                        <h3>CODE EXAMPLE</h3>
+                    </div>
+                    <div class="code-block">
+                        <p>Write a loop that outputs a triangle like this</p>
+                        <div class="code">
+                            <img src="./images/tree.jpg" alt="Task Image">
+                            <pre>
+                                <code>
+                                    <br>let tree = '#';
+                                    <br>for (let i = 0; i &lt; 7; i++) {<br> console.log(tree);<br> tree += '#';<br>}
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </section>
+                <section id="project" class="project section">
+                    <div class="sub-header">
+                        <h3>WHAT I DO</h3>
+                    </div>
+                    <article class="project__item">
+                        <a class="project__link" href="https://sergeyloveyko.github.io/axit-site/">
+                            <img class="project__img" src="./images/axit.jpg" alt="" width="371" height="200">
+                            <div class="project__content">
+                                <h4>HTML, CSS, JavaScript</h4>
+                                <p>Made with BEM and CSS Flexbox layout</p>
+                            </div>
+                        </a>
+                    </article>
+
                 </section>
             </aside>
         </div>
@@ -125,5 +179,7 @@
             </a>
         </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
